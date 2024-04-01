@@ -27,7 +27,7 @@ Para este caso se ven las siguientes relaciones que son brindadas en el ejercici
 
 En este caso para el campo de Matricula, lo que propongo crear los atributos de `fecha_inscripción`, `limite_pago` , `costo_matricula` y pago (este atributo sería para referenciar si ya pago o está pendiente de cancelar la matricula). Para poder relacionar las otras dos tablas, como se expresa en el siguiente esquema:
 
-![Diagrama Entidad Relación](https://imgur.com/a/smkzSjF)
+![Diagrama Entidad Relación](https://i.imgur.com/FS0061h.png)
 
 # Creando los scripts para la creación de la base de datos y las tablas
 
@@ -207,10 +207,10 @@ Se de ingresar al siguinete repositorio:
 
 Ejecutar con la versión en http, en el IDE.
 
-![Botón ejecución](https://imgur.com/JiU1xzi)
+![Botón ejecución](https://i.imgur.com/JiU1xzi.png)
 
 Puede salir el siguiente error:
 
-![Mensaje error](https://imgur.com/TgO40L4)
+![Mensaje error](https://i.imgur.com/TgO40L4.png)
 
 Dar clic en yes. Esto levantará un swagger dónde se podrán usar los métodos válidos de la API.
