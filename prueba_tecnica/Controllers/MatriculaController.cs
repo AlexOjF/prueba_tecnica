@@ -17,7 +17,7 @@ namespace prueba_tecnica.Controllers
             this.DBContext = DBContext;
         }
         //Se crean los métodos del CRUD
-        [HttpGet("GetMatriculas")]
+        [HttpGet]
         public async Task<ActionResult<List<MatriculaDTO>>> Get()
         {
             var List = await DBContext.Matriculas.Select(
@@ -30,8 +30,6 @@ namespace prueba_tecnica.Controllers
                     Pago = s.Pago,
                     IdAspirante = s.IdAspirante,
                     IdPrograma = s.IdPrograma,
-                    IdAspiranteNavigation = s.IdAspiranteNavigation,
-                    IdProgramaNavigation = s.IdProgramaNavigation
                 }
             ).ToListAsync();
 
@@ -45,7 +43,7 @@ namespace prueba_tecnica.Controllers
             }
         }
 
-        [HttpGet("GetMatriculaById")]
+        [HttpGet("{Id}")]
         public async Task<ActionResult<MatriculaDTO>> GetMatriculaById(int Id)
         {
             MatriculaDTO Matricula = await DBContext.Matriculas.Select(
@@ -58,8 +56,6 @@ namespace prueba_tecnica.Controllers
                         Pago = s.Pago,
                         IdAspirante = s.IdAspirante,
                         IdPrograma = s.IdPrograma,
-                        IdAspiranteNavigation = s.IdAspiranteNavigation,
-                        IdProgramaNavigation = s.IdProgramaNavigation
                     })
                 .FirstOrDefaultAsync(s => s.Id == Id);
 
@@ -73,20 +69,17 @@ namespace prueba_tecnica.Controllers
             }
         }
 
-        [HttpPost("InsertMatricula")]
-        public async Task<HttpStatusCode> InsertUser(MatriculaDTO Matricula)
+        [HttpPost]
+        public async Task<HttpStatusCode> InsertMatricula(MatriculaDTO Matricula)
         {
             var entity = new Matricula()
             {
-                Id = Matricula.Id,
                 FechaIncripcin = Matricula.FechaIncripcin,
                 LimitePago = Matricula.LimitePago,
                 CostoMatricula = Matricula.CostoMatricula,
                 Pago = Matricula.Pago,
                 IdAspirante = Matricula.IdAspirante,
                 IdPrograma = Matricula.IdPrograma,
-                IdAspiranteNavigation = Matricula.IdAspiranteNavigation,
-                IdProgramaNavigation = Matricula.IdProgramaNavigation,
 
             };
 
@@ -96,26 +89,22 @@ namespace prueba_tecnica.Controllers
             return HttpStatusCode.Created;
         }
 
-        [HttpPut("UpdateMatricula")]
+        [HttpPut]
         public async Task<HttpStatusCode> UpdateMatricula(MatriculaDTO Matricula)
         {
             var entity = await DBContext.Matriculas.FirstOrDefaultAsync(s => s.Id == Matricula.Id);
 
-            entity.Id = Matricula.Id;
-            entity.FechaIncripcin = Matricula.FechaIncripcin;
             entity.LimitePago = Matricula.LimitePago;
             entity.CostoMatricula = Matricula.CostoMatricula;
             entity.Pago = Matricula.Pago;
             entity.IdAspirante = Matricula.IdAspirante;
             entity.IdPrograma = Matricula.IdPrograma;
-            entity.IdAspiranteNavigation = Matricula.IdAspiranteNavigation;
-            entity.IdProgramaNavigation = Matricula.IdProgramaNavigation;
 
             await DBContext.SaveChangesAsync();
             return HttpStatusCode.OK;
         }
 
-        [HttpDelete("DeleteMatricula/{Id}")]
+        [HttpDelete("{Id}")]
         public async Task<HttpStatusCode> DeleteMatricula(int Id)
         {
             var entity = new Matricula()

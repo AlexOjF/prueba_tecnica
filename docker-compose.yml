@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  prueba_tecnica:
+    build:
+      context: .
+      dockerfile: prueba_tecnica/Dockerfile
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: user_app
+      DB_PASSWORD: Elfenix11tsm*
+      DB_NAME: pruebas
+    ports:
+      - "8080:8080"
+    networks:
+    - default
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: Elfenix11tsm*
+      MYSQL_DATABASE: pruebas
+      MYSQL_USER: user_app
+      MYSQL_PASSWORD: Elfenix11tsm*
+    networks:
+    - default

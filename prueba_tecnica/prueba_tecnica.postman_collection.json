@@ -1,0 +1,1180 @@
+{
+	"info": {
+		"_postman_id": "0829504c-05a3-484b-9979-dfbb376888b9",
+		"name": "prueba_tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24798772"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Aspirante",
+					"item": [
+						{
+							"name": "{Id}",
+							"item": [
+								{
+									"name": "/api/Aspirante/:Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Aspirante/:Id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Aspirante",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Aspirante/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Aspirante",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"correo\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/Aspirante/:Id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Aspirante/:Id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Aspirante",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Aspirante/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Aspirante",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "207"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Aspirante",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Aspirante",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Aspirante"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Aspirante",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Aspirante"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"correo\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"correo\": \"<string>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/Aspirante",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"correo\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Aspirante",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Aspirante"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"correo\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Aspirante",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Aspirante"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "207"
+								}
+							]
+						},
+						{
+							"name": "/api/Aspirante",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"correo\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Aspirante",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Aspirante"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"correo\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Aspirante",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Aspirante"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "207"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Matricula",
+					"item": [
+						{
+							"name": "{Id}",
+							"item": [
+								{
+									"name": "/api/Matricula/:Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Matricula/:Id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Matricula",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Matricula/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Matricula",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<integer>\",\n  \"idAspirante\": \"<string>\",\n  \"idPrograma\": \"<string>\",\n  \"fechaIncripcin\": \"<dateTime>\",\n  \"limitePago\": \"<dateTime>\",\n  \"costoMatricula\": \"<double>\",\n  \"pago\": \"<boolean>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/Matricula/:Id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Matricula/:Id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Matricula",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Matricula/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Matricula",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "207"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Matricula",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Matricula",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Matricula"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Matricula",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Matricula"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"idAspirante\": \"<string>\",\n    \"idPrograma\": \"<string>\",\n    \"fechaIncripcin\": \"<dateTime>\",\n    \"limitePago\": \"<dateTime>\",\n    \"costoMatricula\": \"<double>\",\n    \"pago\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"idAspirante\": \"<string>\",\n    \"idPrograma\": \"<string>\",\n    \"fechaIncripcin\": \"<dateTime>\",\n    \"limitePago\": \"<dateTime>\",\n    \"costoMatricula\": \"<double>\",\n    \"pago\": \"<boolean>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/Matricula",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"idAspirante\": \"<string>\",\n  \"idPrograma\": \"<string>\",\n  \"fechaIncripcin\": \"<dateTime>\",\n  \"limitePago\": \"<dateTime>\",\n  \"costoMatricula\": \"<double>\",\n  \"pago\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Matricula",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Matricula"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"idAspirante\": \"<string>\",\n  \"idPrograma\": \"<string>\",\n  \"fechaIncripcin\": \"<dateTime>\",\n  \"limitePago\": \"<dateTime>\",\n  \"costoMatricula\": \"<double>\",\n  \"pago\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Matricula",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Matricula"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "207"
+								}
+							]
+						},
+						{
+							"name": "/api/Matricula",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"idAspirante\": \"<string>\",\n  \"idPrograma\": \"<string>\",\n  \"fechaIncripcin\": \"<dateTime>\",\n  \"limitePago\": \"<dateTime>\",\n  \"costoMatricula\": \"<double>\",\n  \"pago\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Matricula",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Matricula"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"idAspirante\": \"<string>\",\n  \"idPrograma\": \"<string>\",\n  \"fechaIncripcin\": \"<dateTime>\",\n  \"limitePago\": \"<dateTime>\",\n  \"costoMatricula\": \"<double>\",\n  \"pago\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Matricula",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Matricula"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "207"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Programa",
+					"item": [
+						{
+							"name": "{Id}",
+							"item": [
+								{
+									"name": "/api/Programa/:Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Programa/:Id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Programa",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Programa/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Programa",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<string>\",\n  \"descripcin\": \"<string>\",\n  \"nivel\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/Programa/:Id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Programa/:Id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Programa",
+												":Id"
+											],
+											"variable": [
+												{
+													"key": "Id",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "text/plain"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/Programa/:Id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Programa",
+														":Id"
+													],
+													"variable": [
+														{
+															"key": "Id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "207"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Programa",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Programa",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Programa"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Programa",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Programa"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<string>\",\n    \"descripcin\": \"<string>\",\n    \"nivel\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"descripcin\": \"<string>\",\n    \"nivel\": \"<string>\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/Programa",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"descripcin\": \"<string>\",\n  \"nivel\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Programa",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Programa"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"descripcin\": \"<string>\",\n  \"nivel\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Programa",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Programa"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "207"
+								}
+							]
+						},
+						{
+							"name": "/api/Programa",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"descripcin\": \"<string>\",\n  \"nivel\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Programa",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Programa"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"descripcin\": \"<string>\",\n  \"nivel\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Programa",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Programa"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "207"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}

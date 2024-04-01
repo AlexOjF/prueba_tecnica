@@ -4,6 +4,7 @@ using prueba_tecnica.DTO;
 using prueba_tecnica.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
+using System.Diagnostics;
 
 namespace prueba_tecnica.Controllers
 {
@@ -18,9 +19,10 @@ namespace prueba_tecnica.Controllers
             this.DBContext = DBContext;
         }
         //Se crean los métodos del CRUD
-        [HttpGet("GetProgramas")]
+        [HttpGet]
         public async Task<ActionResult<List<ProgramaDTO>>> Get()
         {
+            System.Console.WriteLine("Ingreso get_porgrama");
             var List = await DBContext.Programas.Select(
                 s => new ProgramaDTO
                 {
@@ -40,9 +42,10 @@ namespace prueba_tecnica.Controllers
             }
         }
 
-        [HttpGet("GetProgramaById")]
+        [HttpGet("{Id}")]
         public async Task<ActionResult<ProgramaDTO>> GetProgramaById(String Id)
         {
+            System.Console.WriteLine("Ingreso get_by_id_porgrama");
             ProgramaDTO Programa = await DBContext.Programas.Select(
                     s => new ProgramaDTO
                     {
@@ -62,9 +65,10 @@ namespace prueba_tecnica.Controllers
             }
         }
 
-        [HttpPost("InsertPrograma")]
-        public async Task<HttpStatusCode> InsertUser(ProgramaDTO Programa)
+        [HttpPost]
+        public async Task<HttpStatusCode> InsertProgram(ProgramaDTO Programa)
         {
+            System.Console.WriteLine("Ingreso post_porgrama");
             var entity = new Programa()
             {
                 Id = Programa.Id,
@@ -78,12 +82,12 @@ namespace prueba_tecnica.Controllers
             return HttpStatusCode.Created;
         }
 
-        [HttpPut("UpdatePrograma")]
+        [HttpPut]
         public async Task<HttpStatusCode> UpdatePrograma(ProgramaDTO Programa)
         {
+            System.Console.WriteLine("Ingreso put_porgrama");
             var entity = await DBContext.Programas.FirstOrDefaultAsync(s => s.Id == Programa.Id);
 
-            entity.Id = Programa.Id;
             entity.Descripcin = Programa.Descripcin;
             entity.Nivel = Programa.Nivel;
 
@@ -91,9 +95,10 @@ namespace prueba_tecnica.Controllers
             return HttpStatusCode.OK;
         }
 
-        [HttpDelete("DeletePrograma/{Id}")]
+        [HttpDelete("{Id}")]
         public async Task<HttpStatusCode> DeletePrograma(String Id)
         {
+            System.Console.WriteLine("Ingreso delete_porgrama");
             var entity = new Programa()
             {
                 Id = Id

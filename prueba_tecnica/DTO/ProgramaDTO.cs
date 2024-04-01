@@ -10,6 +10,5 @@ namespace prueba_tecnica.DTO
 
         public string Nivel { get; set; } = null!;
 
-        public virtual ICollection<Matricula> Matriculas { get; set; } = new List<Matricula>();
     }
 }

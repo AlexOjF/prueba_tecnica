@@ -19,9 +19,10 @@ namespace prueba_tecnica.Controllers
         }
         //Se crean los métodos del CRUD
 
-        [HttpGet("GetAspirantes")]
+        [HttpGet]
         public async Task<ActionResult<List<AspiranteDTO>>> Get()
         {
+            System.Console.WriteLine("Iniciando método");
             var List = await DBContext.Aspirantes.Select(
                 s => new AspiranteDTO
                 {
@@ -43,9 +44,10 @@ namespace prueba_tecnica.Controllers
             }
         }
 
-        [HttpGet("GetAspiranteById")]
+        [HttpGet("{Id}")]
         public async Task<ActionResult<AspiranteDTO>> GetAspiranteById(String Id)
         {
+            System.Console.WriteLine("Iniciando método");
             AspiranteDTO Aspirante = await DBContext.Aspirantes.Select(
                     s => new AspiranteDTO
                     {
@@ -67,9 +69,10 @@ namespace prueba_tecnica.Controllers
             }
         }
 
-        [HttpPost("InsertAspirante")]
-        public async Task<HttpStatusCode> InsertUser(AspiranteDTO Aspirante)
+        [HttpPost]
+        public async Task<HttpStatusCode> InsertAspirante(AspiranteDTO Aspirante)
         {
+            System.Console.WriteLine("Iniciando método");
             var entity = new Aspirante()
             {
                 Id = Aspirante.Id,
@@ -85,12 +88,12 @@ namespace prueba_tecnica.Controllers
             return HttpStatusCode.Created;
         }
 
-        [HttpPut("UpdateAspirante")]
+        [HttpPut]
         public async Task<HttpStatusCode> UpdateAspirante(AspiranteDTO Aspirante)
         {
+            System.Console.WriteLine("Iniciando método");
             var entity = await DBContext.Aspirantes.FirstOrDefaultAsync(s => s.Id == Aspirante.Id);
 
-            entity.Id = Aspirante.Id;
             entity.Nombre = Aspirante.Nombre;
             entity.Apellido = Aspirante.Apellido;
             entity.Celular = Aspirante.Celular;
@@ -100,9 +103,10 @@ namespace prueba_tecnica.Controllers
             return HttpStatusCode.OK;
         }
 
-        [HttpDelete("DeleteAspirante/{Id}")]
+        [HttpDelete("{Id}")]
         public async Task<HttpStatusCode> DeleteAspirante(String Id)
         {
+            System.Console.WriteLine("Iniciando método");
             var entity = new Aspirante()
             {
                 Id = Id

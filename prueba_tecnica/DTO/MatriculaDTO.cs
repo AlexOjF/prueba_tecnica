@@ -17,9 +17,5 @@ namespace prueba_tecnica.DTO
         public double CostoMatricula { get; set; }
 
         public bool Pago { get; set; }
-
-        public virtual Aspirante IdAspiranteNavigation { get; set; } = null!;
-
-        public virtual Programa IdProgramaNavigation { get; set; } = null!;
     }
 }
