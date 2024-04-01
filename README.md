@@ -1,4 +1,4 @@
-# prueba_tecnica
+# crud_universidad
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/prueba7364513/prueba_tecnica.git
+git remote add origin https://gitlab.com/prueba7364513/crud_universidad.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/prueba7364513/prueba_tecnica/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.com/prueba7364513/crud_universidad/-/settings/integrations)
 
 ## Collaborate with your team
 
