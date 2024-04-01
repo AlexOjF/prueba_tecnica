@@ -27,7 +27,7 @@ Para este caso se ven las siguientes relaciones que son brindadas en el ejercici
 
 En este caso para el campo de Matricula, lo que propongo crear los atributos de `fecha_inscripción`, `limite_pago` , `costo_matricula` y pago (este atributo sería para referenciar si ya pago o está pendiente de cancelar la matricula). Para poder relacionar las otras dos tablas, como se expresa en el siguiente esquema:
 
-![Untitled](%F0%9F%A7%91%F0%9F%8F%BE%E2%80%8D%F0%9F%92%BB%20Tech%20Interview%20cd584d81992847918a23285a72fee045/Untitled.png)
+![Diagrama Entidad Relación](https://imgur.com/a/smkzSjF)
 
 # Creando los scripts para la creación de la base de datos y las tablas
 
@@ -207,26 +207,10 @@ Se de ingresar al siguinete repositorio:
 
 Ejecutar con la versión en http, en el IDE.
 
-![Untitled](%F0%9F%A7%91%F0%9F%8F%BE%E2%80%8D%F0%9F%92%BB%20Tech%20Interview%20cd584d81992847918a23285a72fee045/Untitled%201.png)
+![Botón ejecución](https://imgur.com/JiU1xzi)
 
 Puede salir el siguiente error:
 
-![Untitled](%F0%9F%A7%91%F0%9F%8F%BE%E2%80%8D%F0%9F%92%BB%20Tech%20Interview%20cd584d81992847918a23285a72fee045/Untitled%202.png)
+![Mensaje error](https://imgur.com/TgO40L4)
 
 Dar clic en yes. Esto levantará un swagger dónde se podrán usar los métodos válidos de la API.
-
-# Contenerizar la app
-
-Para eso debemos crear primero la imagen de docker y para eso podemos usar las ayudas del IDE.
-
-Luego en la terminal se puede usar el siguiente comando
-
-```sql
-docker build -t <tag_app> -f <nombreapp>/Dockerfile .
-```
-
-Para correr la nueva imagen que hemos generado, se usa el siguinete comando:
-
-```sql
-docker run -it --rm -p <puertos_host>:<puerto_app> <tag_app>
-```
